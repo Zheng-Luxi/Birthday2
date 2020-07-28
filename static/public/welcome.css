@@ -1,0 +1,126 @@
+:root {
+	--blue: rgb( 155, 226, 255 );
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: var( --blue );
+}
+
+input {
+	display: block;
+	height: 7.5vh;
+	margin: 1vh auto;
+	font: normal 20px "Microsoft Arial";
+	text-align: center;
+	border: 0;
+	border-radius: 5px;
+	box-shadow: 0 0 0 2px rgba( 255, 255, 255, .75 ) inset;
+	transition: all .2s ease-in-out 0s;
+}
+
+input:hover {
+	opacity: .65;
+}
+
+input::placeholder {
+	color: #FFF;
+}
+
+h1 {
+	margin-bottom: 20px;
+	color: #FFF;
+	text-align: center;
+}
+
+#name, #password {	
+	padding-left: 10px;
+	background-color: rgba( 255, 255, 255, .6 );
+	color: #FFF;
+}
+
+#name:focus, #password:focus {
+	background-color: white;
+	color: var( --blue );
+}
+
+#goto {
+	background-color: #FFF;
+	color: var( --blue );
+	cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+	h1 {
+		font: normal calc( ( 100vw + 100vh ) / 2 / 20 ) "Arial";
+	}
+
+	#name, #password {
+		width: calc( 20vw - 10px );
+	}
+
+	#name:focus {
+		width: 25vw;
+	}
+
+	#password:focus {
+		width: 25vw;
+	}
+
+	#goto {
+		width: 20vw;
+	}
+}
+
+@media screen and (max-width: 800px) and (min-height: 600px) {
+	h1 {
+		font: normal calc( ( 100vw + 100vh ) / 2 / 13 ) "Arial";
+	}
+
+	#name, #password {
+		width: calc( 40vw - 10px );
+	}
+
+	#name:focus {
+		width: 45vw;
+	}
+
+	#password:focus {
+		width: 45vw;
+	}
+
+	#goto {
+		width: 40vw;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	h1 {
+		font: normal calc( ( 100vw + 100vh ) / 2 / 12 ) "Arial";
+	}
+
+	#name, #password {
+		width: calc( 60vw - 10px );
+	}
+
+	#name:focus {
+		width: 70vw;
+	}
+
+	#password:focus {
+		width: 70vw;
+	}
+
+	#goto {
+		width: 60vw;
+	}
+}
